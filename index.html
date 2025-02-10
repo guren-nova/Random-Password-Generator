@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高性能パスワードジェネレーター</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ランダムパスワードジェネレーター</h1>
+        <label>長さ: <input type="number" id="length" value="12" min="6" max="64"></label>
+        <div class="options">
+            <label><input type="checkbox" id="uppercase" checked> 大文字</label>
+            <label><input type="checkbox" id="lowercase" checked> 小文字</label>
+            <label><input type="checkbox" id="numbers" checked> 数字</label>
+            <label><input type="checkbox" id="symbols"> 記号</label>
+        </div>
+        <label>除外する文字: <input type="text" id="excludeChars" placeholder="例: 0oO1lI"></label>
+        <label>生成数: <input type="number" id="count" value="1" min="1" max="10"></label>
+        <button onclick="generatePasswords()">生成</button>
+        <div id="passwords"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
